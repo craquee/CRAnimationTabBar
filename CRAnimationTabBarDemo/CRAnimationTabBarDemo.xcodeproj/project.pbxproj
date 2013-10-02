@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6438ADAE17FC47950073F0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADAD17FC47950073F0E6 /* Foundation.framework */; };
+		6438ADB017FC47950073F0E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADAF17FC47950073F0E6 /* CoreGraphics.framework */; };
+		6438ADB217FC47950073F0E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADB117FC47950073F0E6 /* UIKit.framework */; };
+		6438ADB817FC47950073F0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6438ADB617FC47950073F0E6 /* InfoPlist.strings */; };
+		6438ADBA17FC47950073F0E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438ADB917FC47950073F0E6 /* main.m */; };
+		6438ADBE17FC47960073F0E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438ADBD17FC47960073F0E6 /* AppDelegate.m */; };
+		6438ADC117FC47960073F0E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6438ADBF17FC47960073F0E6 /* Main.storyboard */; };
+		6438ADC417FC47960073F0E6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438ADC317FC47960073F0E6 /* FirstViewController.m */; };
+		6438ADC717FC47960073F0E6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438ADC617FC47960073F0E6 /* SecondViewController.m */; };
+		6438ADC917FC47960073F0E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6438ADC817FC47960073F0E6 /* Images.xcassets */; };
+		6438ADD017FC47960073F0E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADCF17FC47960073F0E6 /* XCTest.framework */; };
+		6438ADD117FC47960073F0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADAD17FC47950073F0E6 /* Foundation.framework */; };
+		6438ADD217FC47960073F0E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6438ADB117FC47950073F0E6 /* UIKit.framework */; };
+		6438ADDA17FC47960073F0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6438ADD817FC47960073F0E6 /* InfoPlist.strings */; };
+		6438ADDC17FC47960073F0E6 /* CRAnimationTabBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438ADDB17FC47960073F0E6 /* CRAnimationTabBarDemoTests.m */; };
+		8B5A1A14398940369D377379 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BE74404744CC7A76A60BA /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6438ADD317FC47960073F0E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6438ADA217FC47950073F0E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6438ADA917FC47950073F0E6;
+			remoteInfo = CRAnimationTabBarDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6438ADAA17FC47950073F0E6 /* CRAnimationTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAnimationTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6438ADAD17FC47950073F0E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6438ADAF17FC47950073F0E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6438ADB117FC47950073F0E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6438ADB517FC47950073F0E6 /* CRAnimationTabBarDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CRAnimationTabBarDemo-Info.plist"; sourceTree = "<group>"; };
+		6438ADB717FC47950073F0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6438ADB917FC47950073F0E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6438ADBB17FC47960073F0E6 /* CRAnimationTabBarDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRAnimationTabBarDemo-Prefix.pch"; sourceTree = "<group>"; };
+		6438ADBC17FC47960073F0E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6438ADBD17FC47960073F0E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6438ADC017FC47960073F0E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6438ADC217FC47960073F0E6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		6438ADC317FC47960073F0E6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		6438ADC517FC47960073F0E6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		6438ADC617FC47960073F0E6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6438ADC817FC47960073F0E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6438ADCE17FC47960073F0E6 /* CRAnimationTabBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRAnimationTabBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6438ADCF17FC47960073F0E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6438ADD717FC47960073F0E6 /* CRAnimationTabBarDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CRAnimationTabBarDemoTests-Info.plist"; sourceTree = "<group>"; };
+		6438ADD917FC47960073F0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6438ADDB17FC47960073F0E6 /* CRAnimationTabBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRAnimationTabBarDemoTests.m; sourceTree = "<group>"; };
+		6438ADE717FC4E2B0073F0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		964BE74404744CC7A76A60BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBD5446A42D4135ABAFF555 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6438ADA717FC47950073F0E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADB017FC47950073F0E6 /* CoreGraphics.framework in Frameworks */,
+				6438ADB217FC47950073F0E6 /* UIKit.framework in Frameworks */,
+				6438ADAE17FC47950073F0E6 /* Foundation.framework in Frameworks */,
+				8B5A1A14398940369D377379 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6438ADCB17FC47960073F0E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADD017FC47960073F0E6 /* XCTest.framework in Frameworks */,
+				6438ADD217FC47960073F0E6 /* UIKit.framework in Frameworks */,
+				6438ADD117FC47960073F0E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6438ADA117FC47950073F0E6 = {
+			isa = PBXGroup;
+			children = (
+				6438ADB317FC47950073F0E6 /* CRAnimationTabBarDemo */,
+				6438ADD517FC47960073F0E6 /* CRAnimationTabBarDemoTests */,
+				6438ADAC17FC47950073F0E6 /* Frameworks */,
+				6438ADAB17FC47950073F0E6 /* Products */,
+				DEBD5446A42D4135ABAFF555 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		6438ADAB17FC47950073F0E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADAA17FC47950073F0E6 /* CRAnimationTabBarDemo.app */,
+				6438ADCE17FC47960073F0E6 /* CRAnimationTabBarDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6438ADAC17FC47950073F0E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADAD17FC47950073F0E6 /* Foundation.framework */,
+				6438ADAF17FC47950073F0E6 /* CoreGraphics.framework */,
+				6438ADB117FC47950073F0E6 /* UIKit.framework */,
+				6438ADCF17FC47960073F0E6 /* XCTest.framework */,
+				964BE74404744CC7A76A60BA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6438ADB317FC47950073F0E6 /* CRAnimationTabBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADBC17FC47960073F0E6 /* AppDelegate.h */,
+				6438ADBD17FC47960073F0E6 /* AppDelegate.m */,
+				6438ADBF17FC47960073F0E6 /* Main.storyboard */,
+				6438ADC217FC47960073F0E6 /* FirstViewController.h */,
+				6438ADC317FC47960073F0E6 /* FirstViewController.m */,
+				6438ADC517FC47960073F0E6 /* SecondViewController.h */,
+				6438ADC617FC47960073F0E6 /* SecondViewController.m */,
+				6438ADC817FC47960073F0E6 /* Images.xcassets */,
+				6438ADB417FC47950073F0E6 /* Supporting Files */,
+			);
+			path = CRAnimationTabBarDemo;
+			sourceTree = "<group>";
+		};
+		6438ADB417FC47950073F0E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADB517FC47950073F0E6 /* CRAnimationTabBarDemo-Info.plist */,
+				6438ADB617FC47950073F0E6 /* InfoPlist.strings */,
+				6438ADB917FC47950073F0E6 /* main.m */,
+				6438ADBB17FC47960073F0E6 /* CRAnimationTabBarDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6438ADD517FC47960073F0E6 /* CRAnimationTabBarDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADDB17FC47960073F0E6 /* CRAnimationTabBarDemoTests.m */,
+				6438ADD617FC47960073F0E6 /* Supporting Files */,
+			);
+			path = CRAnimationTabBarDemoTests;
+			sourceTree = "<group>";
+		};
+		6438ADD617FC47960073F0E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6438ADD717FC47960073F0E6 /* CRAnimationTabBarDemoTests-Info.plist */,
+				6438ADD817FC47960073F0E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6438ADA917FC47950073F0E6 /* CRAnimationTabBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6438ADDF17FC47960073F0E6 /* Build configuration list for PBXNativeTarget "CRAnimationTabBarDemo" */;
+			buildPhases = (
+				82F38BC9F99641BF80D0B9CB /* Check Pods Manifest.lock */,
+				6438ADA617FC47950073F0E6 /* Sources */,
+				6438ADA717FC47950073F0E6 /* Frameworks */,
+				6438ADA817FC47950073F0E6 /* Resources */,
+				317544E9685B4988A85C74C0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRAnimationTabBarDemo;
+			productName = CRAnimationTabBarDemo;
+			productReference = 6438ADAA17FC47950073F0E6 /* CRAnimationTabBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6438ADCD17FC47960073F0E6 /* CRAnimationTabBarDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6438ADE217FC47960073F0E6 /* Build configuration list for PBXNativeTarget "CRAnimationTabBarDemoTests" */;
+			buildPhases = (
+				6438ADCA17FC47960073F0E6 /* Sources */,
+				6438ADCB17FC47960073F0E6 /* Frameworks */,
+				6438ADCC17FC47960073F0E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6438ADD417FC47960073F0E6 /* PBXTargetDependency */,
+			);
+			name = CRAnimationTabBarDemoTests;
+			productName = CRAnimationTabBarDemoTests;
+			productReference = 6438ADCE17FC47960073F0E6 /* CRAnimationTabBarDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6438ADA217FC47950073F0E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Tomoya Igarashi";
+				TargetAttributes = {
+					6438ADCD17FC47960073F0E6 = {
+						TestTargetID = 6438ADA917FC47950073F0E6;
+					};
+				};
+			};
+			buildConfigurationList = 6438ADA517FC47950073F0E6 /* Build configuration list for PBXProject "CRAnimationTabBarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6438ADA117FC47950073F0E6;
+			productRefGroup = 6438ADAB17FC47950073F0E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6438ADA917FC47950073F0E6 /* CRAnimationTabBarDemo */,
+				6438ADCD17FC47960073F0E6 /* CRAnimationTabBarDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6438ADA817FC47950073F0E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADC917FC47960073F0E6 /* Images.xcassets in Resources */,
+				6438ADB817FC47950073F0E6 /* InfoPlist.strings in Resources */,
+				6438ADC117FC47960073F0E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6438ADCC17FC47960073F0E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADDA17FC47960073F0E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		317544E9685B4988A85C74C0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F38BC9F99641BF80D0B9CB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6438ADA617FC47950073F0E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADC717FC47960073F0E6 /* SecondViewController.m in Sources */,
+				6438ADBE17FC47960073F0E6 /* AppDelegate.m in Sources */,
+				6438ADC417FC47960073F0E6 /* FirstViewController.m in Sources */,
+				6438ADBA17FC47950073F0E6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6438ADCA17FC47960073F0E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6438ADDC17FC47960073F0E6 /* CRAnimationTabBarDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6438ADD417FC47960073F0E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6438ADA917FC47950073F0E6 /* CRAnimationTabBarDemo */;
+			targetProxy = 6438ADD317FC47960073F0E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6438ADB617FC47950073F0E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6438ADB717FC47950073F0E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6438ADBF17FC47960073F0E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6438ADC017FC47960073F0E6 /* Base */,
+				6438ADE717FC4E2B0073F0E6 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6438ADD817FC47960073F0E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6438ADD917FC47960073F0E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6438ADDD17FC47960073F0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6438ADDE17FC47960073F0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6438ADE017FC47960073F0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBD5446A42D4135ABAFF555 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Prefix.pch";
+				INFOPLIST_FILE = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6438ADE117FC47960073F0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBD5446A42D4135ABAFF555 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Prefix.pch";
+				INFOPLIST_FILE = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6438ADE317FC47960073F0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CRAnimationTabBarDemo.app/CRAnimationTabBarDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CRAnimationTabBarDemoTests/CRAnimationTabBarDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6438ADE417FC47960073F0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CRAnimationTabBarDemo.app/CRAnimationTabBarDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CRAnimationTabBarDemo/CRAnimationTabBarDemo-Prefix.pch";
+				INFOPLIST_FILE = "CRAnimationTabBarDemoTests/CRAnimationTabBarDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6438ADA517FC47950073F0E6 /* Build configuration list for PBXProject "CRAnimationTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6438ADDD17FC47960073F0E6 /* Debug */,
+				6438ADDE17FC47960073F0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6438ADDF17FC47960073F0E6 /* Build configuration list for PBXNativeTarget "CRAnimationTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6438ADE017FC47960073F0E6 /* Debug */,
+				6438ADE117FC47960073F0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6438ADE217FC47960073F0E6 /* Build configuration list for PBXNativeTarget "CRAnimationTabBarDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6438ADE317FC47960073F0E6 /* Debug */,
+				6438ADE417FC47960073F0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6438ADA217FC47950073F0E6 /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - CRAnimationTabBar (0.0.1)
+
+DEPENDENCIES:
+  - CRAnimationTabBar (from `..`)
+
+EXTERNAL SOURCES:
+  CRAnimationTabBar:
+    :path: ..
+
+SPEC CHECKSUMS:
+  CRAnimationTabBar: 0e38a70c698005ac574cb7146d7cbb949906112f
+
+COCOAPODS: 0.25.0
