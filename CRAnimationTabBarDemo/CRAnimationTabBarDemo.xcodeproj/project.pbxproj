@@ -46,7 +46,6 @@
 		6438ADBB17FC47960073F0E6 /* CRAnimationTabBarDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRAnimationTabBarDemo-Prefix.pch"; sourceTree = "<group>"; };
 		6438ADBC17FC47960073F0E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6438ADBD17FC47960073F0E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6438ADC017FC47960073F0E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6438ADC217FC47960073F0E6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		6438ADC317FC47960073F0E6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		6438ADC517FC47960073F0E6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -333,7 +332,6 @@
 		6438ADBF17FC47960073F0E6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6438ADC017FC47960073F0E6 /* Base */,
 				6438ADE717FC4E2B0073F0E6 /* en */,
 			);
 			name = Main.storyboard;
