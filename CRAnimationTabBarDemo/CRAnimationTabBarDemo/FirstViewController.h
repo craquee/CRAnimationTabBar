@@ -10,6 +10,6 @@
 
 @interface FirstViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *button;
-- (IBAction)tapButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

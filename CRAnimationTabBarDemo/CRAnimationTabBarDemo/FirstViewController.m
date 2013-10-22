@@ -23,7 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [_button setTitle:@"Hidden TabBar" forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"HideTabBar" style:UIBarButtonItemStyleBordered target:self action:@selector(tapBarButtonItem:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,15 +32,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)tapButton:(id)sender {
+- (IBAction)tapBarButtonItem:(id)sender {
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    UIBarButtonItem *barButtonItem = self.navigationItem.rightBarButtonItem;
     if (delegate.animTabBar.isTabBarHidden) {
-        [delegate.animTabBar showWithAnimated:YES];
-        [_button setTitle:@"Hidden TabBar" forState:UIControlStateNormal];
+        [delegate.animTabBar showWithAnimated:YES tableView:self.tableView];
+        [barButtonItem setTitle:@"HideTabBar"];
     } else {
-        [delegate.animTabBar hideWithAnimated:YES];
-        [_button setTitle:@"Show TabBar" forState:UIControlStateNormal];
+        [delegate.animTabBar hideWithAnimated:YES tableView:self.tableView];
+        [barButtonItem setTitle:@"ShowTabBar"];
     }
     
 }

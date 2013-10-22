@@ -31,7 +31,7 @@
     return self;
 }
 
-- (void)hideWithAnimated:(BOOL)animated
+- (void)hideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
     if (!_isTabBarHidden) {
         UIView *parent = _tabBar.superview; // UILayoutContainerView
@@ -41,12 +41,23 @@
             return;
         }
         
+        CGFloat bottom = CGRectGetHeight(tableView.tableHeaderView.frame) + CGRectGetHeight(tableView.tableFooterView.frame);
+        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+            bottom = 0.f;
+        }
+        UIEdgeInsets contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
+        
+        __block UITableView *bTableView = tableView;
+        
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
                          animations:^{
                              CGRect tabFrame = _tabBar.frame;
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
+                             
+                             bTableView.contentInset = contentInsets;
+                             bTableView.scrollIndicatorInsets = contentInsets;
                          }];
         
         
@@ -61,7 +72,7 @@
     }
 }
 
--(void)showWithAnimated:(BOOL)animated
+-(void)showWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
     if (_isTabBarHidden) {
         UIView *parent = _tabBar.superview; // UILayoutContainerView
@@ -70,6 +81,14 @@
         if (!window) {
             return;
         }
+        
+        CGFloat bottom = CGRectGetHeight(tableView.tableHeaderView.frame) + CGRectGetHeight(tableView.tableFooterView.frame);
+        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+            bottom = 0.f;
+        }
+        UIEdgeInsets contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
+        
+        __block UITableView *bTableView = tableView;
         
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
@@ -82,22 +101,25 @@
                                  CGRect contentFrame = content.frame;
                                  contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
                                  content.frame = contentFrame;
+                                 
+                                 bTableView.contentInset = contentInsets;
+                                 bTableView.scrollIndicatorInsets = contentInsets;
                              }
                          }];
         _isTabBarHidden = NO;
     }
 }
 
-- (void)forceHideWithAnimated:(BOOL)animated
+- (void)forceHideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
     _isTabBarHidden = NO;
-    [self hideWithAnimated:animated];
+    [self hideWithAnimated:animated tableView:tableView];
 }
 
-- (void)forceShowWithAnimated:(BOOL)animated
+- (void)forceShowWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
     _isTabBarHidden = YES;
-    [self showWithAnimated:animated];
+    [self showWithAnimated:animated tableView:tableView];
 }
 
 @end

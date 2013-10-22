@@ -14,10 +14,10 @@
 
 - (id)initWithTabBar:(UITabBar *)tabBar;
 
-- (void)hideWithAnimated:(BOOL)animated;
-- (void)showWithAnimated:(BOOL)animated;
+- (void)hideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
+- (void)showWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
 
-- (void)forceHideWithAnimated:(BOOL)animated;
-- (void)forceShowWithAnimated:(BOOL)animated;
+- (void)forceHideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
+- (void)forceShowWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
 
 @end
