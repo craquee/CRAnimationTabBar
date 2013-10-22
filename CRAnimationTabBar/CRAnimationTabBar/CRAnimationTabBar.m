@@ -8,6 +8,8 @@
 
 #import "CRAnimationTabBar.h"
 
+#import <Foundation/NSObjCRuntime.h>
+
 @interface CRAnimationTabBar ()
 
 @property (strong, nonatomic) UITabBar *tabBar;
@@ -46,10 +48,15 @@
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
                          }];
-        [UIView animateWithDuration:0.f
-                         animations:^{
-                             content.frame = window.bounds;
-                         }];
+        
+        
+        if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
+            [UIView animateWithDuration:0.f
+                             animations:^{
+                                 content.frame = window.bounds;
+                             }];
+        }
+        
         _isTabBarHidden = YES;
     }
 }
@@ -71,9 +78,11 @@
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
                              _tabBar.frame = tabFrame;
                              
-                             CGRect contentFrame = content.frame;
-                             contentFrame.size.height = CGRectGetMaxY(window.bounds) - TABBAR_MARGIN;
-                             content.frame = contentFrame;
+                             if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
+                                 CGRect contentFrame = content.frame;
+                                 contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
+                                 content.frame = contentFrame;
+                             }
                          }];
         _isTabBarHidden = NO;
     }
