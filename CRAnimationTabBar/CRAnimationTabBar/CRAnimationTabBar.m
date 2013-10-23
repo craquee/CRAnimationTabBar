@@ -80,14 +80,6 @@
             return;
         }
         
-        if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
-            CGRect contentFrame = content.frame;
-            contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
-            content.frame = contentFrame;
-        } else {
-            content.frame = window.frame;
-        }
-        
         UIEdgeInsets contentInsets = UIEdgeInsetsZero;
         UIEdgeInsets scrollIndicatorInsets = UIEdgeInsetsZero;
         if (tableView != nil) {
@@ -108,7 +100,15 @@
                              CGRect tabFrame = _tabBar.frame;
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
                              _tabBar.frame = tabFrame;
-                             
+                         }
+                         completion:^(BOOL finished) {
+                             if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
+                                 CGRect contentFrame = content.frame;
+                                 contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
+                                 content.frame = contentFrame;
+                             } else {
+                                 content.frame = window.frame;
+                             }
                          }];
         _isTabBarHidden = NO;
     }
