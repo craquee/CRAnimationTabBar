@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 @interface CRAnimationTabBar : NSObject
 
 @property (unsafe_unretained, nonatomic) BOOL isTabBarHidden;

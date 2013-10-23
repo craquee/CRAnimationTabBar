@@ -41,13 +41,22 @@
             return;
         }
         
-        CGFloat bottom = CGRectGetHeight(tableView.tableHeaderView.frame) + CGRectGetHeight(tableView.tableFooterView.frame);
-        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-            bottom = 0.f;
-        }
-        UIEdgeInsets contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
+        content.frame = window.frame;
         
-        __block UITableView *bTableView = tableView;
+        UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+        UIEdgeInsets scrollIndicatorInsets = UIEdgeInsetsZero;
+        if (tableView != nil) {
+            CGFloat bottom = CGRectGetHeight(_tabBar.frame) + CGRectGetHeight(tableView.tableFooterView.frame);
+            if (IS_WIDESCREEN) {
+                // TODO:微調整して算出した。固定値の元になった値を調べる。
+                bottom = 4.f;
+            }
+            contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
+            scrollIndicatorInsets = UIEdgeInsetsMake(tableView.scrollIndicatorInsets.top, tableView.scrollIndicatorInsets.left, contentInsets.bottom, tableView.scrollIndicatorInsets.right);
+            
+            tableView.contentInset = contentInsets;
+            tableView.scrollIndicatorInsets = scrollIndicatorInsets;
+        }
         
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
@@ -55,18 +64,7 @@
                              CGRect tabFrame = _tabBar.frame;
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
-                             
-                             bTableView.contentInset = contentInsets;
-                             bTableView.scrollIndicatorInsets = contentInsets;
                          }];
-        
-        
-        if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
-            [UIView animateWithDuration:0.f
-                             animations:^{
-                                 content.frame = window.bounds;
-                             }];
-        }
         
         _isTabBarHidden = YES;
     }
@@ -82,13 +80,27 @@
             return;
         }
         
-        CGFloat bottom = CGRectGetHeight(tableView.tableHeaderView.frame) + CGRectGetHeight(tableView.tableFooterView.frame);
-        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-            bottom = 0.f;
+        if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
+            CGRect contentFrame = content.frame;
+            contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
+            content.frame = contentFrame;
+        } else {
+            content.frame = window.frame;
         }
-        UIEdgeInsets contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
         
-        __block UITableView *bTableView = tableView;
+        UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+        UIEdgeInsets scrollIndicatorInsets = UIEdgeInsetsZero;
+        if (tableView != nil) {
+            CGFloat bottom = 0.f;
+            // TODO:tableFooterView.frame.height?
+            if (tableView.contentInset.bottom >= 49.f) {
+                bottom = 49.f;
+            }
+            contentInsets = UIEdgeInsetsMake(tableView.contentInset.top, tableView.contentInset.left, bottom, tableView.contentInset.right);
+            scrollIndicatorInsets = UIEdgeInsetsMake(tableView.scrollIndicatorInsets.top, tableView.scrollIndicatorInsets.left, contentInsets.bottom, tableView.scrollIndicatorInsets.right);
+            tableView.contentInset = contentInsets;
+            tableView.scrollIndicatorInsets = scrollIndicatorInsets;
+        }
         
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
@@ -97,14 +109,6 @@
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
                              _tabBar.frame = tabFrame;
                              
-                             if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1) {
-                                 CGRect contentFrame = content.frame;
-                                 contentFrame.size.height = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
-                                 content.frame = contentFrame;
-                                 
-                                 bTableView.contentInset = contentInsets;
-                                 bTableView.scrollIndicatorInsets = contentInsets;
-                             }
                          }];
         _isTabBarHidden = NO;
     }

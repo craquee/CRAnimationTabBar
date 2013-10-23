@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CRAnimationTabBar"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A short description of CRAnimationTabBar."
 
   s.description  = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '5.1'
 
-  s.source       = { :git => "git@github.com:craquee/CRAnimationTabBar.git", :tag => "0.0.3" }
+  s.source       = { :git => "git@github.com:craquee/CRAnimationTabBar.git", :tag => "0.0.4" }
 
   s.source_files  = 'CRAnimationTabBar/**/*.{h,m}'
   s.exclude_files = 'CRAnimationTabBar/**/*Tests.{h,m}'
