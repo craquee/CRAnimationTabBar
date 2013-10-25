@@ -19,7 +19,4 @@
 - (void)hideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
 - (void)showWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
 
-- (void)forceHideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
-- (void)forceShowWithAnimated:(BOOL)animated tableView:(UITableView *)tableView;
-
 @end

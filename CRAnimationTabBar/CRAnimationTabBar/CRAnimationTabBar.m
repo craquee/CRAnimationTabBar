@@ -114,16 +114,4 @@
     }
 }
 
-- (void)forceHideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
-{
-    _isTabBarHidden = NO;
-    [self hideWithAnimated:animated tableView:tableView];
-}
-
-- (void)forceShowWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
-{
-    _isTabBarHidden = YES;
-    [self showWithAnimated:animated tableView:tableView];
-}
-
 @end
