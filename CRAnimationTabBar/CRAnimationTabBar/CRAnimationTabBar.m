@@ -45,11 +45,14 @@
 
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
+                              delay:0.f
+                            options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              CGRect tabFrame = _tabBar.frame;
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
-                         }];
+                         }
+                         completion:nil];
         
         _isTabBarHidden = YES;
     }
@@ -67,6 +70,8 @@
         
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
+                              delay:0.f
+                            options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              CGRect tabFrame = _tabBar.frame;
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
