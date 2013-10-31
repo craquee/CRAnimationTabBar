@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) UITabBar *tabBar;
 
+@property (unsafe_unretained, nonatomic) BOOL isTabBarAnimate;
+
 @end
 
 #define TABBAR_MARGIN 20.f
@@ -26,6 +28,7 @@
     if (self) {
         _tabBar = tabBar;
         _isTabBarHidden = NO;
+        _isTabBarAnimate = NO;
     }
     
     return self;
@@ -33,6 +36,10 @@
 
 - (void)hideWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
+    if (_isTabBarAnimate) {
+        return;
+    }
+    
     if (!_isTabBarHidden) {
         UIView *parent = _tabBar.superview; // UILayoutContainerView
         UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
@@ -52,14 +59,21 @@
                              tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
                          }
-                         completion:nil];
+                         completion:^(BOOL finished) {
+                             _isTabBarAnimate = NO;
+                         }];
         
         _isTabBarHidden = YES;
+        _isTabBarAnimate = YES;
     }
 }
 
 -(void)showWithAnimated:(BOOL)animated tableView:(UITableView *)tableView
 {
+    if (_isTabBarAnimate) {
+        return;
+    }
+    
     if (_isTabBarHidden) {
         UIView *parent = _tabBar.superview; // UILayoutContainerView
         UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
@@ -81,8 +95,11 @@
                              CGRect contentFrame = content.frame;
                              contentFrame.size.height = CGRectGetHeight(window.frame) - CGRectGetHeight(_tabBar.frame);
                              content.frame = contentFrame;
+                             _isTabBarAnimate = NO;
                          }];
+        
         _isTabBarHidden = NO;
+        _isTabBarAnimate = YES;
     }
 }
 
