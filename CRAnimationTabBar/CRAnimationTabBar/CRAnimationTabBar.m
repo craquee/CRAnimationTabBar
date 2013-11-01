@@ -48,7 +48,14 @@
             return;
         }
         
-        content.frame = window.frame;
+        CGRect windowFrame = window.frame;
+        if(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+            windowFrame.size.height = [[UIScreen mainScreen] applicationFrame].size.height + 20;
+        }
+        else {
+            windowFrame.size.height = [[UIScreen mainScreen] bounds].size.height;
+        }
+        content.frame = windowFrame;
 
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
@@ -56,7 +63,7 @@
                             options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              CGRect tabFrame = _tabBar.frame;
-                             tabFrame.origin.y = CGRectGetMaxY(window.bounds) + TABBAR_MARGIN;
+                             tabFrame.origin.y = windowFrame.size.height + TABBAR_MARGIN;
                              _tabBar.frame = tabFrame;
                          }
                          completion:^(BOOL finished) {
@@ -82,18 +89,26 @@
             return;
         }
         
+        CGRect windowFrame = window.frame;
+        if(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+            windowFrame.size.height = [[UIScreen mainScreen] applicationFrame].size.height + 20;
+        }
+        else {
+            windowFrame.size.height = [[UIScreen mainScreen] bounds].size.height;
+        }
+        
         CGFloat duration = animated ? 0.2f : 0.001f;
         [UIView animateWithDuration:duration
                               delay:0.f
                             options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              CGRect tabFrame = _tabBar.frame;
-                             tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(_tabBar.frame);
+                             tabFrame.origin.y = windowFrame.size.height - CGRectGetHeight(_tabBar.frame);
                              _tabBar.frame = tabFrame;
                          }
                          completion:^(BOOL finished) {
                              CGRect contentFrame = content.frame;
-                             contentFrame.size.height = CGRectGetHeight(window.frame) - CGRectGetHeight(_tabBar.frame);
+                             contentFrame.size.height = windowFrame.size.height - CGRectGetHeight(_tabBar.frame);
                              content.frame = contentFrame;
                              _isTabBarAnimate = NO;
                          }];
